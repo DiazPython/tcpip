@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCP/IP - Exposición</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        .content-section {
+            background-color: white;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+        .layer-card {
+            background-color: #e8f4fc;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 5px 5px 0;
+        }
+        .layer-card h3 {
+            margin-top: 0;
+            color: #2980b9;
+        }
+        .example {
+            background-color: #e8f8f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #1abc9c;
+        }
+        .example-title {
+            font-weight: bold;
+            color: #16a085;
+            margin-bottom: 10px;
+        }
+        .history-timeline {
+            border-left: 3px solid #3498db;
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+        .timeline-item {
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #3498db;
+            border-radius: 50%;
+            left: -28px;
+            top: 5px;
+        }
+        .timeline-year {
+            font-weight: bold;
+            color: #2980b9;
+        }
+        .use-cases {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .use-case {
+            background-color: #f0f7fd;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #d0e3f1;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+        }
+        .authors {
+            margin-top: 15px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Modelo TCP/IP</h1>
+        <p>Protocolo fundamental para la comunicación en redes</p>
+    </header>
+
+    <div class="content-section">
+        <h2>¿Qué es TCP/IP?</h2>
+        <p>TCP/IP (Transmission Control Protocol/Internet Protocol) es el conjunto de protocolos de comunicación que forma la base de Internet y permite la transmisión de datos entre dispositivos en redes. Es el lenguaje universal que usan las computadoras para comunicarse entre sí.</p>
+        
+        <p>Este modelo divide los mensajes en paquetes más pequeños que pueden tomar diferentes rutas hacia su destino, donde se reensamblan. Este enfoque innovador evita tener que retransmitir mensajes completos cuando ocurren problemas en la red, haciendo las comunicaciones más eficientes y robustas.</p>
+        
+        <p>TCP/IP no es un solo protocolo, sino una suite que incluye múltiples protocolos como HTTP, FTP, SMTP y otros, cada uno diseñado para funciones específicas dentro de la arquitectura de red.</p>
+    </div>
+
+    <div class="content-section">
+        <h2>Historia y Evolución</h2>
+        <div class="history-timeline">
+            <div class="timeline-item">
+                <span class="timeline-year">1970s:</span> Vint Cerf y Bob Kahn diseñan el TCP original en DARPA para conectar redes diversas.
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">1973:</span> Primeras investigaciones sobre comunicación confiable en redes de radio, base del futuro TCP/IP.
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">1974:</span> Publicación de RFC 675, primera especificación oficial del "Transmission Control Program".
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">1975:</span> Primera prueba internacional entre Stanford y University College London.
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">1977:</span> Conexión exitosa de tres redes en EE.UU., Reino Unido y Noruega demostrando la eficacia de TCP/IP.
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">1978:</span> División del protocolo en TCP (control de conexión) e IP (direccionamiento y enrutamiento).
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">1982:</span> Adopción oficial por el Departamento de Defensa de EE.UU.
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">1983:</span> ARPANET completa su transición a TCP/IP el 1 de enero, marcando el nacimiento de Internet moderna.
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2>¿Para qué sirve TCP/IP?</h2>
+        <p>TCP/IP es esencial para prácticamente todas las formas de comunicación digital moderna. Sus principales funciones incluyen:</p>
+        
+        <ul>
+            <li>Permitir la comunicación entre diferentes tipos de dispositivos y sistemas operativos</li>
+            <li>Garantizar la entrega confiable de datos a través de redes</li>
+            <li>Proporcionar direccionamiento único para cada dispositivo en una red (direcciones IP)</li>
+            <li>Manejar el enrutamiento de datos a través de múltiples redes</li>
+            <li>Controlar el flujo de información para evitar congestión</li>
+        </ul>
+        
+        <h3>Usos principales:</h3>
+        <div class="use-cases">
+            <div class="use-case">Navegación web (HTTP/HTTPS)</div>
+            <div class="use-case">Correo electrónico (SMTP, POP3, IMAP)</div>
+            <div class="use-case">Transferencia de archivos (FTP, SFTP)</div>
+            <div class="use-case">Voz sobre IP (VoIP)</div>
+            <div class="use-case">Transmisión de video (Streaming)</div>
+            <div class="use-case">Acceso remoto (SSH, Telnet)</div>
+            <div class="use-case">Juegos en línea</div>
+            <div class="use-case">IoT (Internet de las Cosas)</div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2>¿Cómo funciona?</h2>
+        <p>TCP/IP organiza la comunicación en capas estandarizadas, simplificando el proceso para fabricantes y desarrolladores. Los datos pasan por cuatro capas antes de llegar al destino, y luego recorren estas capas en orden inverso para reconstruir el mensaje original.</p>
+        
+        <p>Como protocolo orientado a conexión, TCP establece un enlace entre dispositivos hasta completar la transferencia. Se encarga de:</p>
+        <ul>
+            <li>Dividir los mensajes en paquetes</li>
+            <li>Numerar los paquetes para su posterior reensamblaje</li>
+            <li>Manejar paquetes perdidos mediante retransmisión</li>
+            <li>Controlar el flujo de datos para evitar saturación</li>
+            <li>Garantizar la entrega ordenada de la información</li>
+        </ul>
+        
+        <div class="example">
+            <div class="example-title">Ejemplo práctico:</div>
+            <p>Cuando envías un correo electrónico, el servidor divide el mensaje en paquetes usando TCP. La capa IP transporta estos paquetes al servidor destino, donde TCP los reensambla en el mensaje original antes de entregarlo al buzón del receptor. Si algún paquete se pierde en el camino, TCP detecta su ausencia y solicita su retransmisión.</p>
+        </div>
+        
+        <p>TCP/IP usa un "protocolo de enlace de tres vías" para iniciar conexiones (SYN, SYN-ACK, ACK), donde dispositivo y servidor sincronizan y confirman la comunicación antes de comenzar la transferencia de datos. Este mecanismo garantiza que ambas partes estén listas para comunicarse.</p>
+    </div>
+
+    <div class="content-section">
+        <h2>Las 4 capas del modelo TCP/IP</h2>
+        <p>Este modelo estandariza cómo se transmiten y organizan los datos en redes, dividiendo el proceso en cuatro niveles jerárquicos:</p>
+        
+        <div class="layer-card">
+            <h3>1. Capa de enlace de datos (Data Link Layer)</h3>
+            <p>Define cómo se transmiten físicamente los datos entre dispositivos en una red. Esta capa incluye:</p>
+            <ul>
+                <li>Controladores de hardware y tarjetas de red</li>
+                <li>Cables Ethernet, fibra óptica</li>
+                <li>Conexiones inalámbricas (Wi-Fi, Bluetooth)</li>
+                <li>Protocolos como Ethernet, Wi-Fi, PPP</li>
+            </ul>
+            <p>También llamada capa física o de acceso a la red, se encarga de la topología de red y el acceso al medio físico.</p>
+        </div>
+        
+        <div class="layer-card">
+            <h3>2. Capa de Internet (Internet Layer)</h3>
+            <p>Encargada del direccionamiento lógico y enrutamiento de paquetes a través de redes. Sus funciones principales son:</p>
+            <ul>
+                <li>Direccionamiento IP (IPv4 e IPv6)</li>
+                <li>Enrutamiento de paquetes entre redes</li>
+                <li>Fragmentación y reensamblaje de paquetes</li>
+                <li>Protocolos como IP, ICMP, ARP</li>
+            </ul>
+            <p>Esta capa permite que los datos viajen a través de múltiples redes diferentes hasta llegar a su destino.</p>
+        </div>
+        
+        <div class="layer-card">
+            <h3>3. Capa de transporte (Transport Layer)</h3>
+            <p>Establece conexiones confiables entre dispositivos y maneja el transporte de datos. Sus características incluyen:</p>
+            <ul>
+                <li>División de datos en paquetes numerados</li>
+                <li>Control de flujo y congestión</li>
+                <li>Retransmisión de paquetes perdidos</li>
+                <li>Protocolos TCP (orientado a conexión) y UDP (sin conexión)</li>
+                <li>Puertos lógicos para multiplexar conexiones</li>
+            </ul>
+            <p>Garantiza que los datos lleguen completos, en orden y sin errores al destino.</p>
+        </div>
+        
+        <div class="layer-card">
+            <h3>4. Capa de aplicación (Application Layer)</h3>
+            <p>Interfaz con programas que usan la red. Proporciona servicios directamente al usuario final:</p>
+            <ul>
+                <li>Protocolos como HTTP, FTP, SMTP, DNS</li>
+                <li>Interfaces de programación (APIs)</li>
+                <li>Aplicaciones como navegadores, clientes de email</li>
+                <li>Servicios de red (web, correo, transferencia archivos)</li>
+            </ul>
+            <p>Es la capa visible para los usuarios, donde se implementa la lógica específica de cada aplicación.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Exposición sobre TCP/IP | Modelo de referencia para comunicaciones en red</p>
+        <div class="authors">
+            Presentado por:<br>
+            Juan Díaz<br>
+            Jean Monroy<br>
+            Cristian Cabrera
+        </div>
+    </footer>
+</body>
+</html>
